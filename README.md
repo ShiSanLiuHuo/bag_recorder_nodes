@@ -1,16 +1,16 @@
 # bag_recorder_nodes
 是一个用于记录ros2 bag的节点
 
-**只适用于ros2 jazzy**
+由于相机的分辨率过高，需使用intra-process通信
 
-由于writer的api做了修改，不能再humble上使用
+相机参数： 曝光30000 增益最高
 
 ## run
 ```
-ros2 run bag_recorder_nodes bag_recorder_nodes
+ros2 launch livox_ros2_driver livox_lidar_launch.py
+ros2 launch launch.py
 ```
 
-## rosbag
-在**jazzy**上录制的rosbag无法在**humble**上播放
-
-解决方案：[源神启动](https://github.com/NeonVector/rosbag_converter_jazzy2humble)
+## 注意
+jazzy 和humble的metadtata有所不同
+可以使用[这个](https://github.com/NeonVector/rosbag_converter_jazzy2humble)转化

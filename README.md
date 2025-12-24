@@ -12,5 +12,10 @@ ros2 launch launch.py
 ```
 
 ## 注意
-jazzy 和humble的metadtata有所不同
+本代码在 jazzy 和 humble 下均测试通过
+> camera_node中使用了cv_bridge
+> 在 jazzy 下，cv_bridge 头文件为 `cv_bridge/cv_bridge.hpp`
+> 在 humble 下，cv_bridge 头文件为 `cv_bridge/cv_bridge.h`
+
+但 jazzy 和 humble 的 metadata 有所不同
 可以使用[这个](https://github.com/NeonVector/rosbag_converter_jazzy2humble)转化
